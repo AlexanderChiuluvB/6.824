@@ -49,7 +49,7 @@ package labrpc
 //   pass svc to srv.AddService()
 //
 
-import "labgob"
+import "../labgob"
 import "bytes"
 import "reflect"
 import "sync"
@@ -405,6 +405,7 @@ func (rs *Server) dispatch(req reqMsg) replyMsg {
 		for k, _ := range rs.services {
 			choices = append(choices, k)
 		}
+
 		log.Fatalf("labrpc.Server.dispatch(): unknown service %v in %v.%v; expecting one of %v\n",
 			serviceName, serviceName, methodName, choices)
 		return replyMsg{false, nil}
@@ -488,6 +489,7 @@ func (svc *Service) dispatch(methname string, req reqMsg) replyMsg {
 		for k, _ := range svc.methods {
 			choices = append(choices, k)
 		}
+		log.Println(choices)
 		log.Fatalf("labrpc.Service.dispatch(): unknown method %v in %v; expecting one of %v\n",
 			methname, req.svcMeth, choices)
 		return replyMsg{false, nil}
