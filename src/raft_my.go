@@ -1,4 +1,4 @@
-package raft
+package src
 
 //
 // this is an outline of the API that raft must expose to
@@ -23,8 +23,8 @@ import (
 	"sync"
 	"time"
 )
-import "../labrpc"
-import "../labgob"
+import "./labrpc"
+import "./labgob"
 // import "bytes"
 // import "encoding/gob"
 
@@ -567,36 +567,36 @@ func Make(peers []*labrpc.ClientEnd, me int,
 			default:
 			}
 
-			rf.mu.Lock()
-			role := rf.role
-			eTimeOut := rf.electionTimeout()
-			rf.mu.Unlock()
+		rf.mu.Lock()
+		role := rf.role
+		eTimeOut := rf.electionTimeout()
+		rf.mu.Unlock()
 
-			switch role {
-			case Leader:
-				rf.broadcastEntries()
-				time.Sleep(heartBeat * time.Millisecond)
-			case Candidate:
-				go rf.leaderElection()
-				select {
-				case <-rf.appendCh:
-				case <-rf.voteCh:
-				case <-rf.leaderCh:
-					//只有在超时的时候变为candidate
-				case <-time.After(eTimeOut):
-					rf.mu.Lock()
-					rf.changeRole(Candidate)
-					rf.mu.Unlock()
-				}
+		switch role {
+		case Leader:
+			rf.broadcastEntries()
+			time.Sleep(heartBeat * time.Millisecond)
+		case Candidate:
+			go rf.leaderElection()
+			select {
+			case <-rf.appendCh:
+			case <-rf.voteCh:
+			case <-rf.leaderCh:
+				//只有在超时的时候变为candidate
+			case <-time.After(eTimeOut):
+				rf.mu.Lock()
+				rf.changeRole(Candidate)
+				rf.mu.Unlock()
+			}
 
-			case Follower:
-				select {
-				case <-rf.appendCh:
-				case <-rf.voteCh:
-				case <-time.After(eTimeOut):
-					rf.mu.Lock()
-					rf.changeRole(Candidate)
-					rf.mu.Unlock()
+		case Follower:
+			select {
+			case <-rf.appendCh:
+			case <-rf.voteCh:
+			case <-time.After(eTimeOut):
+				rf.mu.Lock()
+				rf.changeRole(Candidate)
+				rf.mu.Unlock()
 				}
 			}
 		}

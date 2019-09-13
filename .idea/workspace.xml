@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6a1be79-c632-43f3-ac87-87603142973a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/6.824.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kvraft/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kvraft/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/kvraft/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labrpc/labrpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/labrpc/labrpc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linearizability/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/linearizability/models.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raft/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raft/raft.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/raft.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/raft_my.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raft/raft.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/raft/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/util.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shardkv/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shardkv/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardkv/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shardmaster/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/shardmaster/server.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,17 +14,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5728643">
+    <splitter split-orientation="horizontal" split-proportion="0.35870242">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/raft/raft.go">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/raft/config.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="704">
-                  <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+                <state relative-caret-position="3244">
+                  <caret line="280" column="24" selection-start-line="280" selection-start-column="24" selection-end-line="280" selection-end-column="24" />
                   <folding>
-                    <element signature="e#591#636#0" expanded="true" />
+                    <element signature="e#230#425#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/labrpc/test_test.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="220">
+                  <caret line="15" selection-start-line="15" selection-end-line="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/labrpc/labrpc.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="7766">
+                  <caret line="353" selection-start-line="353" selection-end-line="353" />
+                  <folding>
+                    <element signature="e#2171#2319#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/raft_my.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="295">
+                  <caret line="404" column="38" selection-start-line="404" selection-start-column="38" selection-end-line="404" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
@@ -42,31 +62,23 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/MIT6-824-lab2-raft.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="109">
-                    <caret line="15" selection-start-line="15" selection-end-line="16" />
-                  </first_editor>
-                  <second_editor />
+            <entry file="file://$PROJECT_DIR$/src/raft/raft.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/labrpc/test_test.go">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/labrpc/labrpc.go">
+            <entry file="file://$PROJECT_DIR$/src/raft/util.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-8708">
-                  <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+                <state relative-caret-position="1146">
+                  <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
                   <folding>
-                    <element signature="e#2171#2319#0" expanded="true" />
+                    <element signature="e#14#43#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -76,18 +88,44 @@
       </split-second>
     </splitter>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>reply</find>
       <find>firstIndex</find>
-      <find>persist</find>
       <find>persister</find>
       <find>voteFlag</find>
       <find>DPri</find>
       <find>RequestVoteArgs</find>
-      <find>RequestVote</find>
-      <find>AppendEntries</find>
       <find>unknown me</find>
+      <find>persist</find>
+      <find>candidate</find>
+      <find>Start</find>
+      <find>curCommit</find>
+      <find>saveSta</find>
+      <find>ApplyMst</find>
+      <find>msg</find>
+      <find>changeRole</find>
+      <find>RequestVOte</find>
+      <find>applyLogs</find>
+      <find>ApplyMsg</find>
+      <find>SaveSna</find>
+      <find>SnapShot</find>
+      <find>func M</find>
+      <find>broadca</find>
+      <find>GetT</find>
+      <find>APPENDENTRIES</find>
+      <find>START</find>
+      <find>Make</find>
+      <find>AppendEntries</find>
+      <find>RequestVote</find>
+      <find>AppendENtries</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/snap/go/4301" />
@@ -98,19 +136,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/raft/labrpc.go" />
-        <option value="$PROJECT_DIR$/src/raft/util.go" />
         <option value="$PROJECT_DIR$/src/raft/test_test.go" />
         <option value="$PROJECT_DIR$/src/raft/config.go" />
         <option value="$PROJECT_DIR$/src/labrpc/labrpc.go" />
+        <option value="$PROJECT_DIR$/src/raft/log.go" />
+        <option value="$PROJECT_DIR$/src/raft/raft2.go" />
+        <option value="$PROJECT_DIR$/src/raft.go" />
+        <option value="$PROJECT_DIR$/src/raft/util.go" />
+        <option value="$PROJECT_DIR$/src/raft/raft_my.go" />
+        <option value="$PROJECT_DIR$/src/raft_my.go" />
         <option value="$PROJECT_DIR$/src/raft/raft.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-136" />
-    <option name="y" value="74" />
-    <option name="width" value="1521" />
-    <option name="height" value="925" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="679" />
+    <option name="y" value="207" />
+    <option name="width" value="1511" />
+    <option name="height" value="924" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -133,12 +176,6 @@
               <item name="6.824" type="b2602c69:ProjectViewProjectNode" />
               <item name="6.824" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="labrpc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="6.824" type="b2602c69:ProjectViewProjectNode" />
-              <item name="6.824" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="raft" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -150,18 +187,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/raft" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mit6.824-2017-raft" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/raft" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -205,13 +246,14 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="29" width="1920" height="970" extended-state="6" />
+    <frame x="679" y="207" width="1511" height="924" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14087513" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18498294" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897863" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32779098" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897863" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -220,7 +262,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3337292" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.072864324" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -255,23 +297,6 @@
         <state relative-caret-position="-3828" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/persister.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/util.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/raft/test_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -279,19 +304,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labrpc/test_test.go">
+    <entry file="file://$PROJECT_DIR$/src/raft/err.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/labrpc/labrpc.go">
+    <entry file="file://$PROJECT_DIR$/src/raft/info.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8708">
-          <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
-          <folding>
-            <element signature="e#2171#2319#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-20803" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/raft/warn.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41967" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/raft/log.go" />
+    <entry file="file://$PROJECT_DIR$/src/raft/raft2.go" />
     <entry file="file://$PROJECT_DIR$/MIT6-824-lab2-raft.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -302,13 +329,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/raft/raftWarn.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/raft.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="329" column="47" lean-forward="true" selection-start-line="329" selection-start-column="47" selection-end-line="329" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labrpc/labrpc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7766">
+          <caret line="353" selection-start-line="353" selection-end-line="353" />
+          <folding>
+            <element signature="e#2171#2319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/labrpc/test_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/raft/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3244">
+          <caret line="280" column="24" selection-start-line="280" selection-start-column="24" selection-end-line="280" selection-end-column="24" />
+          <folding>
+            <element signature="e#230#425#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/raft/persister.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///snap/go/4301/src/builtin/builtin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="188" column="5" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/raft/raftInfo.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1275" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/raft/util.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1146">
+          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+          <folding>
+            <element signature="e#14#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/raft_my.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="404" column="38" selection-start-line="404" selection-start-column="38" selection-end-line="404" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/raft/raft.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-          <folding>
-            <element signature="e#591#636#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
         </state>
       </provider>
     </entry>
