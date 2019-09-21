@@ -1,7 +1,11 @@
 package mapreduce
 
 import (
+	"encoding/json"
 	"hash/fnv"
+	"io/ioutil"
+	"log"
+	"os"
 )
 
 func doMap(
@@ -53,6 +57,34 @@ func doMap(
 	//
 	// Your code here (Part I).
 	//
+	//第一件事　读取文件
+	fileContent, err := ioutil.ReadFile(inFile)
+	if err != nil {
+		log.Fatal("can't read file")
+	}
+	KeyValuePairs := mapF(inFile, string(fileContent))
+
+	//保存到本地，首先要知道文件的名称
+	//　用一个map[String] key:string value:一个Encoder
+	mapFiles := make(map[string]*json.Encoder)
+
+	for i:=0; i<nReduce; i++ {
+
+		fileName:= reduceName(jobName, mapTask, i)
+		file, createError := os.Create(fileName)
+		if createError != nil {
+			log.Fatal("can't create file")
+		}
+		defer file.Close()
+		mapFiles[fileName] = json.NewEncoder(file)
+	}
+
+	for _,kv:=range KeyValuePairs {
+		//相同key的内容会映射到相同的文件
+		kvFileName := reduceName(jobName, mapTask, ihash(kv.Key)%nReduce)
+		mapFiles[kvFileName].Encode(&kv)
+	}
+
 }
 
 func ihash(s string) int {

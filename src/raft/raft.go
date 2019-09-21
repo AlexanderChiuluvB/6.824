@@ -492,8 +492,6 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 		InfoRaft.Printf("Raft:%2d term:%3d | Leader receive a new command:%4v cmdIndex:%4v\n", rf.me, rf.currentTerm, command, index)
 		rf.persist()
 	}
-
-
 	return index, term, isLeader
 }
 
@@ -679,7 +677,6 @@ func (rf *Raft) leaderElection() {
 	}
 }
 
-
 func (rf *Raft) broadcastEntries() {
 
 	rf.mu.Lock()
@@ -772,20 +769,19 @@ func (rf *Raft) broadcastEntries() {
 						return
 					}
 
+					//当前提交的长度大于上次同步的长度
 					if curCommitLen >= rf.matchIndex[server] {
-						rf.matchIndex[server] = curCommitLen
+						rf.matchIndex[server] = curCommitLen //更新这次同步的index
 						rf.nextIndex[server] = rf.matchIndex[server] + 1
 					}
 
 					commitMutex.Lock()
 					defer commitMutex.Unlock()
-
 					commitNum = commitNum + 1
 
 					if commitFlag && commitNum > len(rf.peers)/2 {
 						//超过半数的commit
 						commitFlag = false
-
 
 						//leader提交日志，并且修改commitIndex
 						/**
@@ -801,16 +797,17 @@ func (rf *Raft) broadcastEntries() {
 					}
 					rf.mu.Unlock()
 					return
-				} else {
+				} else {//reply False
+
 
 					if reply.ConflictTerm == -1 {
 						rf.nextIndex[server] = reply.ConflictIndex
 					} else {
-
 						// 日志不匹配
 						rf.nextIndex[server] = rf.addIdx(1)
 						i := reply.ConflictIndex
 						for ; i > rf.lastIncludedIndex; i-- {
+							//回滚到冲突的任期
 							if rf.logs[rf.subIdx(i)].Term == reply.ConflictTerm {
 								rf.nextIndex[server] = i + 1
 								break
@@ -826,7 +823,6 @@ func (rf *Raft) broadcastEntries() {
 					InfoRaft.Printf("Raft:%2d term:%3d | Msg to %3d fail,decrease nextIndex to:%3d\n",
 						rf.me, rf.currentTerm, server, rf.nextIndex[server])
 					rf.mu.Unlock()
-
 				}
 			}
 

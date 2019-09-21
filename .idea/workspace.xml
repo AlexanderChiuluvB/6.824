@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f6a1be79-c632-43f3-ac87-87603142973a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/raft_my.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raft/raft.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raft/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/common_map.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/common_map.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapreduce/common_reduce.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapreduce/common_reduce.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raft/raft.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/raft/raft.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,80 +22,42 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.35870242">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/raft/config.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3244">
-                  <caret line="280" column="24" selection-start-line="280" selection-start-column="24" selection-end-line="280" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#230#425#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/labrpc/test_test.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="15" selection-start-line="15" selection-end-line="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/labrpc/labrpc.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7766">
-                  <caret line="353" selection-start-line="353" selection-end-line="353" />
-                  <folding>
-                    <element signature="e#2171#2319#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/raft_my.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="295">
-                  <caret line="404" column="38" selection-start-line="404" selection-start-column="38" selection-end-line="404" selection-end-column="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/raft/raft.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/raft/util.go">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1146">
-                  <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#14#43#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/common_map.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-839">
+              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/common.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mapreduce/common_reduce.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1169">
+              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              <folding>
+                <element signature="e#19#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -126,6 +97,7 @@
       <find>AppendEntries</find>
       <find>RequestVote</find>
       <find>AppendENtries</find>
+      <find>matchIndex</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/snap/go/4301" />
@@ -135,53 +107,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/raft/labrpc.go" />
-        <option value="$PROJECT_DIR$/src/raft/test_test.go" />
-        <option value="$PROJECT_DIR$/src/raft/config.go" />
-        <option value="$PROJECT_DIR$/src/labrpc/labrpc.go" />
-        <option value="$PROJECT_DIR$/src/raft/log.go" />
-        <option value="$PROJECT_DIR$/src/raft/raft2.go" />
-        <option value="$PROJECT_DIR$/src/raft.go" />
-        <option value="$PROJECT_DIR$/src/raft/util.go" />
-        <option value="$PROJECT_DIR$/src/raft/raft_my.go" />
-        <option value="$PROJECT_DIR$/src/raft_my.go" />
-        <option value="$PROJECT_DIR$/src/raft/raft.go" />
+        <option value="$PROJECT_DIR$/src/mapreduce/common_reduce.go" />
+        <option value="$PROJECT_DIR$/src/mapreduce/common_map.go" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="679" />
-    <option name="y" value="207" />
-    <option name="width" value="1511" />
-    <option name="height" value="924" />
+    <option name="x" value="1039" />
+    <option name="y" value="139" />
+    <option name="width" value="1521" />
+    <option name="height" value="925" />
   </component>
+  <component name="ProjectId" id="1R8m1INEasHZz5Ytoxt2ZrRxcYw" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="6.824" type="b2602c69:ProjectViewProjectNode" />
-              <item name="6.824" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="6.824" type="b2602c69:ProjectViewProjectNode" />
-              <item name="6.824" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="6.824" type="b2602c69:ProjectViewProjectNode" />
-              <item name="6.824" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="raft" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -193,7 +136,7 @@
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mit6.824-2017-raft" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -217,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestReElection2A in test_test.go">
+  <component name="RunManager" selected="Go Test.TestInitialElection2A in test_test.go">
     <configuration name="TestInitialElection2A in test_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="6.824" />
       <working_directory value="$PROJECT_DIR$/src/raft" />
@@ -238,174 +181,103 @@
       <pattern value="^TestReElection2A$" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Test.TestReElection2A in test_test.go" />
-        <item itemvalue="Go Test.TestInitialElection2A in test_test.go" />
-      </list>
-    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6a1be79-c632-43f3-ac87-87603142973a" name="Default Changelist" comment="" />
+      <created>1569056881194</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569056881194</updated>
+      <workItem from="1569056887038" duration="890000" />
+    </task>
+    <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="679" y="207" width="1511" height="924" extended-state="0" />
+    <frame x="1039" y="139" width="1521" height="925" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18498294" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.06915254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32779098" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32897863" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.072864324" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/raft/labrpc.go" />
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-409" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapreduce/common.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="462">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/common_map.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-839">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapreduce/common_reduce.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1169">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding>
-            <element signature="e#19#47#0" expanded="true" />
+            <element signature="e#19#52#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labgob/labgob.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapreduce/test_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3828" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/test_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/err.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/info.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20803" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/warn.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41967" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/log.go" />
-    <entry file="file://$PROJECT_DIR$/src/raft/raft2.go" />
-    <entry file="file://$PROJECT_DIR$/MIT6-824-lab2-raft.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="109">
-            <caret line="15" selection-start-line="15" selection-end-line="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/raftWarn.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="329" column="47" lean-forward="true" selection-start-line="329" selection-start-column="47" selection-end-line="329" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labrpc/labrpc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7766">
-          <caret line="353" selection-start-line="353" selection-end-line="353" />
-          <folding>
-            <element signature="e#2171#2319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/labrpc/test_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3244">
-          <caret line="280" column="24" selection-start-line="280" selection-start-column="24" selection-end-line="280" selection-end-column="24" />
-          <folding>
-            <element signature="e#230#425#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/persister.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///snap/go/4301/src/builtin/builtin.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="188" column="5" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/raftInfo.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1275" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/util.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1146">
-          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
-          <folding>
-            <element signature="e#14#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft_my.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="404" column="38" selection-start-line="404" selection-start-column="38" selection-end-line="404" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/raft/raft.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
         </state>
       </provider>
     </entry>
