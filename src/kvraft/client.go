@@ -9,8 +9,8 @@ type Clerk struct {
 	servers []*labrpc.ClientEnd
 	// You will have to modify this struct.
 	leader   int   //记录最新的leader
-	cid      int64 //每个clerk都有独一无二的编号
-	cmdIndex int   //clerk给每个RPC调用编号
+	Cid      int64 //每个clerk都有独一无二的编号
+	CmdIndex int   //clerk给每个RPC调用编号
 }
 
 func nrand() int64 {
@@ -23,6 +23,9 @@ func nrand() int64 {
 func MakeClerk(servers []*labrpc.ClientEnd) *Clerk {
 	ck := new(Clerk)
 	ck.servers = servers
+	ck.leader = 0
+	ck.Cid = nrand()
+	ck.CmdIndex = 0
 	// You'll have to add code here.
 	return ck
 }
@@ -50,10 +53,10 @@ func (ck *Clerk) Get(key string) string {
 
 	// You will have to modify this function.
 	leader := ck.leader
-	ck.cmdIndex++
-	args := GetArgs{key, ck.cid, ck.cmdIndex}
+	ck.CmdIndex++
+	args := GetArgs{key, ck.Cid, ck.CmdIndex}
 	raft.InfoKV.Printf("Client:%20v cmdIndex:%4d Begin! Get:[%v] from server %3d \n",
-		ck.cid, ck.cmdIndex, key, leader)
+		ck.Cid, ck.CmdIndex, key, leader)
 
 	for {
 
@@ -64,12 +67,12 @@ func (ck *Clerk) Get(key string) string {
 			ck.leader = leader
 			if reply.Value == ErrNoKey {
 				raft.InfoKV.Printf("Client %20v cmdIndex:%4d Get failed! No such key!",
-					ck.cid, ck.cmdIndex)
+					ck.Cid, ck.CmdIndex)
 				return ""
 			}
 			raft.InfoKV.Printf("Client %20v cmdIndex:%4d Successful! Get:[%v] "+
 				"from server:%3d value:[%v]",
-				ck.cid, ck.cmdIndex, key, leader, reply.Value)
+				ck.Cid, ck.CmdIndex, key, leader, reply.Value)
 			raft.InfoKV.Printf("")
 			return reply.Value
 		}
@@ -93,10 +96,10 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 
 	// You will have to modify this function.
 	leader := ck.leader
-	ck.cmdIndex++
-	args := PutAppendArgs{key, value, op, ck.cid, ck.cmdIndex}
+	ck.CmdIndex++
+	args := PutAppendArgs{key, value, op, ck.Cid, ck.CmdIndex}
 	raft.InfoKV.Printf("Client:%20v cmdIndex:%4d| Begin! %6s key:[%s] value:[%s] " +
-		"to server:%3d\n", ck.cid, ck.cmdIndex, op, key, value, leader)
+		"to server:%3d\n", ck.Cid, ck.CmdIndex, op, key, value, leader)
 
 	for {
 
@@ -105,6 +108,8 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 		ok := ck.servers[leader].Call("KVServer.PutAppend", &args, &reply)
 		if ok && !reply.WrongLeader && reply.Err == OK {
 			ck.leader = leader
+			return
+
 		}
 		//如果对面的server不是leader,
 		leader = (leader + 1) % len(ck.servers)
