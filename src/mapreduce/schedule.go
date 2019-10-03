@@ -42,6 +42,7 @@ func schedule(jobName string, mapFiles []string, nReduce int, phase jobPhase, re
 			taskchan <- i
 		}
 	}()
+	//要等所有任务都完成之后才能结束这个函数
 	wg.Add(ntasks)
 	go func(){
 		for{
@@ -59,19 +60,16 @@ func schedule(jobName string, mapFiles []string, nReduce int, phase jobPhase, re
 			go func(){
 				if call(service, "Worker.DoTask",args,nil){
 					wg.Done()
-					//任务结束后,这项服务传回给"可注册的任务"
+					//任务结束后,这项服务传回给"可注册的任务",等待下一次任务的分配
 					registerChan <- service
 				}else{
-					//把没有完成的任务传回给taskchan
+					//把没有完成的任务传回给taskchan,如果任务失败了,就传回给taskChannel
 					taskchan <- args.TaskNumber
 				}
-
 			}()
 		}
 	}()
-
 	//阻塞
 	wg.Wait()
-
 	fmt.Printf("Schedule: %v done\n", phase)
 }
