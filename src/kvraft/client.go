@@ -1,12 +1,16 @@
 package raftkv
 
-import "labrpc"
+import "../labrpc"
 import "crypto/rand"
 import "math/big"
+import "../raft"
 
 type Clerk struct {
 	servers []*labrpc.ClientEnd
 	// You will have to modify this struct.
+	leader   int   //记录最新的leader
+	cid      int64 //每个clerk都有独一无二的编号
+	cmdIndex int   //clerk给每个RPC调用编号
 }
 
 func nrand() int64 {
@@ -35,10 +39,44 @@ func MakeClerk(servers []*labrpc.ClientEnd) *Clerk {
 // must match the declared types of the RPC handler function's
 // arguments. and reply must be passed as a pointer.
 //
+
+/*
+一个无限循环直到指令发送成功,循环内部是一个RPC调用,如果成功就立刻返回
+如果由于超时或者所联系的server对应的raft不是Leader,则更换一个server发起指令
+当client联系到leader的时候会记录leader的编号,那么下一次执行新的命令的时候,会直接
+联系leader,而不是从头开始遍历寻找leader
+*/
 func (ck *Clerk) Get(key string) string {
 
 	// You will have to modify this function.
-	return ""
+	leader := ck.leader
+	ck.cmdIndex++
+	args := GetArgs{key, ck.cid, ck.cmdIndex}
+	raft.InfoKV.Printf("Client:%20v cmdIndex:%4d Begin! Get:[%v] from server %3d \n",
+		ck.cid, ck.cmdIndex, key, leader)
+
+	for {
+
+		reply := GetReply{}
+		//RPC调用
+		ok := ck.servers[leader].Call("KVServer.Get", &args, &reply)
+		if ok && !reply.WrongLeader {
+			ck.leader = leader
+			if reply.Value == ErrNoKey {
+				raft.InfoKV.Printf("Client %20v cmdIndex:%4d Get failed! No such key!",
+					ck.cid, ck.cmdIndex)
+				return ""
+			}
+			raft.InfoKV.Printf("Client %20v cmdIndex:%4d Successful! Get:[%v] "+
+				"from server:%3d value:[%v]",
+				ck.cid, ck.cmdIndex, key, leader, reply.Value)
+			raft.InfoKV.Printf("")
+			return reply.Value
+		}
+		//如果对面的server不是leader,
+		leader = (leader + 1) % len(ck.servers)
+	}
+
 }
 
 //
@@ -52,7 +90,26 @@ func (ck *Clerk) Get(key string) string {
 // arguments. and reply must be passed as a pointer.
 //
 func (ck *Clerk) PutAppend(key string, value string, op string) {
+
 	// You will have to modify this function.
+	leader := ck.leader
+	ck.cmdIndex++
+	args := PutAppendArgs{key, value, op, ck.cid, ck.cmdIndex}
+	raft.InfoKV.Printf("Client:%20v cmdIndex:%4d| Begin! %6s key:[%s] value:[%s] " +
+		"to server:%3d\n", ck.cid, ck.cmdIndex, op, key, value, leader)
+
+	for {
+
+		reply := PutAppendReply{}
+		//RPC调用
+		ok := ck.servers[leader].Call("KVServer.PutAppend", &args, &reply)
+		if ok && !reply.WrongLeader && reply.Err == OK {
+			ck.leader = leader
+		}
+		//如果对面的server不是leader,
+		leader = (leader + 1) % len(ck.servers)
+	}
+
 }
 
 func (ck *Clerk) Put(key string, value string) {
